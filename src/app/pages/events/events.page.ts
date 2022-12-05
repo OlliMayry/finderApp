@@ -12,7 +12,8 @@ import { environment } from 'src/environments/environment';
 })
 
 export class EventsPage implements OnInit {
- 
+  art:any = [];
+  sport:any = [];
   music:any = [];
   events:any = [];
   currentPage = 1;
@@ -53,6 +54,28 @@ export class EventsPage implements OnInit {
 
       for (let key in obj) {
       this.music.push(...res._embedded[key]);
+      console.log(res);
+      }
+      
+    });
+
+    this.eventService.getSportEvents(this.currentPage).subscribe((res) =>  {
+      loading.dismiss();
+      const obj = res._embedded;
+
+      for (let key in obj) {
+      this.sport.push(...res._embedded[key]);
+      console.log(res);
+      }
+      
+    });
+
+    this.eventService.getArtEvents(this.currentPage).subscribe((res) =>  {
+      loading.dismiss();
+      const obj = res._embedded;
+
+      for (let key in obj) {
+      this.art.push(...res._embedded[key]);
       console.log(res);
       }
       

@@ -41,4 +41,16 @@ export class EventService {
      );     
    }
 
+   getSportEvents(page = 1): Observable<ApiResult> {
+    return this.http.get<ApiResult>(
+     `${environment.baseUrl}?apikey=${environment.apiKey}&countryCode=FI&classificationName=sports`
+     );     
+   }
+
+   getArtEvents(page = 1): Observable<ApiResult> {
+    return this.http.get<ApiResult>(
+     `${environment.baseUrl}?apikey=${environment.apiKey}&countryCode=FI&classificationName=arts`
+     );     
+   }
+
 }

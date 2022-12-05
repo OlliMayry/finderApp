@@ -2,7 +2,7 @@
     color: white;
 
 
-#hero{
+.hero{
         --background: none;
         background: linear-gradient(
             rgba(0, 0, 0, 0.5),
@@ -21,6 +21,7 @@ ion-toolbar{
         font-size: 27px;
         text-align: center;
         color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     }
 
     
@@ -39,6 +40,8 @@ ion-toolbar{
 
 p{
     color:white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .wrapper{
            
@@ -50,7 +53,7 @@ p{
         min-width: 100px;
         height: auto;
         position: relative;
-        margin: 10px 10px;
+        margin: 5px 10px;
         img{
         width: 100px;
          height: 100px;
@@ -58,6 +61,19 @@ p{
          display: block;
          margin-right: auto;
          margin-left: auto;
+         border: 2px solid #fff;
+        }
+        ion-card-subtitle{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 10px;
+            text-align: center;
+        }
+        ion-card-content{
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+            margin-top: 5px;
+            padding: 0;
         }
     }
 }

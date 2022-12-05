@@ -2,40 +2,67 @@
     margin: 0;
 }
 
+.hero{
+    --background: none;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),url('https://i0.wp.com/themusicuniverse.com/wp-content/uploads/2022/05/eurovision.jpg?resize=768%2C432&ssl=1');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    --min-height: 80px;
+}
+ion-title{
+    font-size: 27px;
+    text-align: center;
+    color: white;
+}
+
+ion-back-button{
+    color: white;
+    font-size: 20px;
+}
+
+ion-content {
+    --background: black;
+}
+
 img{
     height: 250px;
     width: 100%;
-    background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0.5)
-    );
     margin: 0px;
+    
 }
 
-#first{
-    margin-top: -170px;
-    font-size: 25px;
+ion-card{
+background: black;
+border-radius: 0;
 }
 
-#second{
-    margin-top: -120px;
-}
-
-#third{
-    margin-top: -100px;
-}
-
-#fourth{
-    margin-top: -50px;
-}
-
-#center{
-    text-align: center;
-}
 ion-button{
     align-items: center;
     width: 300px;
     text-align: center;
     margin-top: 50px;
+}
+
+ion-item::part(native) {
+    background: black;
+    color: white;
+}
+
+ion-card-title, ion-card-subtitle, ion-icon {
+    color: white;
+}
+ion-card-subtitle{
+    font-size: 15px;
+}
+
+ion-icon {
+    margin-right: 10px;
+}
+
+#center{
+    text-align: center;
 }
