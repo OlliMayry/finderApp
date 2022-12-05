@@ -31,7 +31,7 @@ export class EventService {
 
   getEventDetails(id: string) {
     return this.http.get(
-    'https://app.ticketmaster.com/discovery/v2/events/"${id}"?apikey=PpctKoGuRkIEpAzTtHnGwrdA2UnLA3rj&locale=*&countryCode=FI'
+      `${environment.baseUrl}/${id}.json?apikey=${environment.apiKey}`
 
 
 /*       `${environment.baseUrl}events/${id}?api_key=${environment.apiKey}` */
