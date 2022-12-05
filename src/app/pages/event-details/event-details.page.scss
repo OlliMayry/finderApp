@@ -1,6 +1,15 @@
+*{
+    margin: 0;
+}
+
 img{
+    height: 250px;
     width: 100%;
-    opacity: 0.5;
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    );
     margin: 0px;
 }
 
@@ -19,4 +28,14 @@ img{
 
 #fourth{
     margin-top: -50px;
+}
+
+#center{
+    text-align: center;
+}
+ion-button{
+    align-items: center;
+    width: 300px;
+    text-align: center;
+    margin-top: 50px;
 }

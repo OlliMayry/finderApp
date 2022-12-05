@@ -1,28 +1,65 @@
-<ion-header>
-  <ion-toolbar color="primary">
-    <ion-title>Event Finder</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Home</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>Favourites</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>Search</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>My profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar id="hero">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Event finder</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-content>
+      <div class="holder">
+        <p>All upcoming events</p>
+        <div class="wrapper">
+          <div
+            class="item"
+            *ngFor="let item of events"
+            [routerLink]="[item.id]"
+          >
+            <img [src]=" item.images[0].url" />
 
-<ion-content>
-  <ion-list>
-    <ion-item button *ngFor="let item of events" [routerLink]="[item.id]">
-      <ion-avatar slot="start">
-        <img [src]=" item.images[0].url" />
-      </ion-avatar>
-      <ion-label>
-        {{ item.name }}
-        <p value="Date:">Date: {{ item.dates.start.localDate }}</p>
-        <p value="Time:">Time: {{ item.dates.start.localTime }}</p>
-        <p value="Address:">
-          Address: {{ item._embedded.venues[0].address.line1 }}
-        </p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
-  <!--   <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+            <ion-card-subtitle>{{item.name}}</ion-card-subtitle>
+          </div>
+        </div>
+      </div>
+
+      <ion-list>
+        <ion-item button *ngFor="let item of events" [routerLink]="[item.id]">
+          <ion-avatar slot="start">
+            <img [src]=" item.images[0].url" />
+          </ion-avatar>
+          <ion-label>
+            {{ item.name }}
+            <p value="Date:">Date: {{ item.dates.start.localDate }}</p>
+            <p value="Time:">Time: {{ item.dates.start.localTime }}</p>
+            <p value="Address:">
+              Address: {{ item._embedded.venues[0].address.line1 }}
+            </p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <!--   <ion-infinite-scroll (ionInfinite)="loadMore($event)">
     <ion-infinite-scroll-content
      loadingSpinner="bubbles"
      loadingText="Loading more data..."></ion-infinite-scroll-content>
   </ion-infinite-scroll> -->
-</ion-content>
+    </ion-content>
+  </ion-content>
+</div>
