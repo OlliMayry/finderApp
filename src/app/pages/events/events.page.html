@@ -40,6 +40,17 @@
         </div>
       </div>
 
+      <div class="holder">
+        <p>Music Events</p>
+        <div class="wrapper">
+          <div class="item" *ngFor="let item of music" [routerLink]="[item.id]">
+            <img [src]=" item.images[0].url" />
+
+            <ion-card-subtitle>{{item.name}}</ion-card-subtitle>
+          </div>
+        </div>
+      </div>
+
       <ion-list>
         <ion-item button *ngFor="let item of events" [routerLink]="[item.id]">
           <ion-avatar slot="start">

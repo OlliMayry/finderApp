@@ -13,6 +13,7 @@ import { environment } from 'src/environments/environment';
 
 export class EventsPage implements OnInit {
  
+  music:any = [];
   events:any = [];
   currentPage = 1;
   imageBaseUrl = environment.images;
@@ -46,6 +47,16 @@ export class EventsPage implements OnInit {
       }
     });
 
+    this.eventService.getMusicEvents(this.currentPage).subscribe((res) =>  {
+      loading.dismiss();
+      const obj = res._embedded;
+
+      for (let key in obj) {
+      this.music.push(...res._embedded[key]);
+      console.log(res);
+      }
+      
+    });
     
   }
   loadMore(event: InfiniteScrollCustomEvent) {

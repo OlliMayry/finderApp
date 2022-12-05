@@ -32,9 +32,13 @@ export class EventService {
   getEventDetails(id: string) {
     return this.http.get(
       `${environment.baseUrl}/${id}.json?apikey=${environment.apiKey}`
-
-
-/*       `${environment.baseUrl}events/${id}?api_key=${environment.apiKey}` */
     );
   }
+
+  getMusicEvents(page = 1): Observable<ApiResult> {
+    return this.http.get<ApiResult>(
+     `${environment.baseUrl}?apikey=${environment.apiKey}&countryCode=FI&classificationName=music`
+     );     
+   }
+
 }
