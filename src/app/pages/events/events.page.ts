@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { LoadingController } from '@ionic/angular';
+import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
 import { EventService } from 'src/app/services/event.service';
 import { environment } from 'src/environments/environment';
 /*import { ApiResult } from 'src/app/services/event.service'; */
@@ -31,7 +31,7 @@ export class EventsPage implements OnInit {
     });
     await loading.present();
 
-     this.eventService.getTopRatedEvents().subscribe((res) =>  {
+     this.eventService.getTopRatedEvents(this.currentPage).subscribe((res) =>  {
       loading.dismiss();
    
       const obj = res._embedded;
@@ -41,8 +41,12 @@ export class EventsPage implements OnInit {
       for (let key in obj) {
         this.events.push(...res._embedded[key]);
         console.log(obj[key]);
+        
       }
     });
   }
-
+  loadMore(event: InfiniteScrollCustomEvent) {
+    this.currentPage++;
+    this.loadEvents();
+  }
 }

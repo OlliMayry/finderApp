@@ -6,6 +6,7 @@ import { environment } from 'src/environments/environment';
 
 
 export interface ApiResult {
+  page: number;
   _embedded: any[];
     _links: [];
   name: string;
@@ -23,7 +24,7 @@ export interface ApiResult {
 export class EventService {
   constructor(private http: HttpClient) { }
 
-  getTopRatedEvents(): Observable<ApiResult> {
+  getTopRatedEvents(page = 1): Observable<ApiResult> {
    return this.http.get<ApiResult>(
 /*     'https://app.ticketmaster.com/discovery/v2/events?apikey=PpctKoGuRkIEpAzTtHnGwrdA2UnLA3rj&locale=*&countryCode=FI' */
 

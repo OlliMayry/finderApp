@@ -8,15 +8,19 @@
   <ion-list>
     <ion-item button *ngFor="let item of events" [routerLink]="[item.id]">
       <ion-avatar slot="start">
-<!--         <img [src]="imageBaseUrl + '/w92' + item.poster_path" /> -->
+         <img [src]=" item.images[0].url" />
       </ion-avatar>
        <ion-label >
          {{ item.name }} 
-        <p> {{ item.dates.start.localDate }} </p>
-<!--         <p> {{ item.dates.start.localTime | date, shortTime: 'h:mm' }} </p> -->
+        <p value="Date:">Date: {{ item.dates.start.localDate }} </p>
+         <p value="Time:">Time: {{ item.dates.start.localTime }} </p> 
+         <p value="Address:">Address: {{ item._embedded.venues[0].address.line1 }} </p>
         </ion-label>
-
-
     </ion-item>
   </ion-list>
+<!--   <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content
+     loadingSpinner="bubbles"
+     loadingText="Loading more data..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
 </ion-content>
