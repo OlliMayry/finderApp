@@ -16,6 +16,7 @@ export class EventsPage implements OnInit {
   events:any = [];
   currentPage = 1;
   imageBaseUrl = environment.images;
+  apiKey = environment.apiKey;
  
 
   constructor(private eventService: EventService, private loadingCtrl: LoadingController) {}
@@ -44,6 +45,8 @@ export class EventsPage implements OnInit {
         
       }
     });
+
+    
   }
   loadMore(event: InfiniteScrollCustomEvent) {
     this.currentPage++;

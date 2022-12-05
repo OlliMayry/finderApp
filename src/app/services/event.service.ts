@@ -8,15 +8,10 @@ import { environment } from 'src/environments/environment';
 export interface ApiResult {
   page: number;
   _embedded: any[];
-    _links: [];
+  _links: [];
   name: string;
   id: string;
   }
-
-
-
-
-
 
 @Injectable({
   providedIn: 'root'

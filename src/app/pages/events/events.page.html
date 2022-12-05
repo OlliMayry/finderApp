@@ -8,6 +8,7 @@
   <ion-list>
     <ion-item button *ngFor="let item of events" [routerLink]="[item.id]">
       <ion-avatar slot="start">
+<<<<<<< Updated upstream
          <img [src]=" item.images[0].url" />
       </ion-avatar>
        <ion-label >
@@ -16,6 +17,15 @@
          <p value="Time:">Time: {{ item.dates.start.localTime }} </p> 
          <p value="Address:">Address: {{ item._embedded.venues[0].address.line1 }} </p>
         </ion-label>
+=======
+        <img src="{{ item.images[0].url }}" />
+      </ion-avatar>
+      <ion-label>
+        {{ item.name }}
+        <p>{{ item.dates.start.localDate }}</p>
+        <!--         <p> {{ item.dates.start.localTime | date, shortTime: 'h:mm' }} </p> -->
+      </ion-label>
+>>>>>>> Stashed changes
     </ion-item>
   </ion-list>
 <!--   <ion-infinite-scroll (ionInfinite)="loadMore($event)">
