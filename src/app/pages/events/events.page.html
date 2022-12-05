@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Trending Events</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button *ngFor="let item of events" [routerLink]="[item.id]">
+      <ion-avatar slot="start">
+<!--         <img [src]="imageBaseUrl + '/w92' + item.poster_path" /> -->
+      </ion-avatar>
+       <ion-label >
+         {{ item.name }} 
+        <p> {{ item.dates.start.localDate }} </p>
+<!--         <p> {{ item.dates.start.localTime | date, shortTime: 'h:mm' }} </p> -->
+        </ion-label>
+
+
+    </ion-item>
+  </ion-list>
+</ion-content>
