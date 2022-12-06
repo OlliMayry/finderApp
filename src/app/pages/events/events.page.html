@@ -24,7 +24,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-searchbar
+      <ion-searchbar
       color="light"
       placeholder="Search for an event"
       [(ngModel)]="searchTerm!"
@@ -32,8 +32,6 @@
       animated
     >
     </ion-searchbar>
-
-    <ion-content>
       <div class="holder">
         <p id="extra-margin">All upcoming events</p>
         <div class="wrapper">
@@ -101,5 +99,4 @@
      loadingText="Loading more data..."></ion-infinite-scroll-content>
   </ion-infinite-scroll> -->
     </ion-content>
-  </ion-content>
 </div>
