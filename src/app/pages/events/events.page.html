@@ -33,7 +33,7 @@
             *ngFor="let item of events"
             [routerLink]="[item.id]"
           >
-            <img [src]=" item.images[0].url" />
+            <img [src]=" item.images[5].url" />
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
             <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
           </div>
@@ -44,7 +44,7 @@
         <p>Music Events</p>
         <div class="wrapper">
           <div class="item" *ngFor="let item of music" [routerLink]="[item.id]">
-            <img [src]=" item.images[0].url" />
+            <img [src]=" item.images[5].url" />
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
             <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
           </div>
@@ -55,7 +55,7 @@
         <p>Sport Events</p>
         <div class="wrapper">
           <div class="item" *ngFor="let item of sport" [routerLink]="[item.id]">
-            <img [src]=" item.images[0].url" />
+            <img [src]=" item.images[5].url" />
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
             <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
           </div>
@@ -66,7 +66,7 @@
         <p>Art Events</p>
         <div class="wrapper">
           <div class="item" *ngFor="let item of art" [routerLink]="[item.id]">
-            <img [src]=" item.images[0].url" />
+            <img [src]=" item.images[5].url" />
 
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
             <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
