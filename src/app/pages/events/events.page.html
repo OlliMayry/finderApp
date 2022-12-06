@@ -4,12 +4,6 @@
       <ion-title>Home</ion-title>
     </ion-toolbar>
     <ion-toolbar>
-      <ion-title>Favourites</ion-title>
-    </ion-toolbar>
-    <ion-toolbar>
-      <ion-title>Search</ion-title>
-    </ion-toolbar>
-    <ion-toolbar>
       <ion-title>My profile</ion-title>
     </ion-toolbar>
   </ion-header>
@@ -24,7 +18,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-      <ion-searchbar
+    <ion-searchbar
       color="light"
       placeholder="Search for an event"
       [(ngModel)]="searchTerm!"
@@ -32,71 +26,71 @@
       animated
     >
     </ion-searchbar>
-      <div class="holder">
-        <p id="extra-margin">All upcoming events</p>
-        <div class="wrapper">
-          <div
-            class="item"
-            *ngFor="let item of events | filter:searchTerm!"
-            [routerLink]="[item.id]"
-          >
-            <img [src]=" item.images[5].url" />
-            <ion-card-content>{{item.name | truncate :[25]}}</ion-card-content>
-            <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
-          </div>
+    <div class="holder">
+      <p id="extra-margin">All upcoming events</p>
+      <div class="wrapper">
+        <div
+          class="item"
+          *ngFor="let item of events | filter:searchTerm!"
+          [routerLink]="[item.id]"
+        >
+          <img [src]=" item.images[5].url" />
+          <ion-card-content>{{item.name | truncate :[25]}}</ion-card-content>
+          <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
         </div>
       </div>
+    </div>
 
-      <div class="holder">
-        <p>Music Events</p>
-        <div class="wrapper">
-          <div
-            class="item"
-            *ngFor="let item of music | filter:searchTerm!"
-            [routerLink]="[item.id]"
-          >
-            <img [src]=" item.images[5].url" />
-            <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
-            <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
-          </div>
+    <div class="holder">
+      <p>Music Events</p>
+      <div class="wrapper">
+        <div
+          class="item"
+          *ngFor="let item of music | filter:searchTerm!"
+          [routerLink]="[item.id]"
+        >
+          <img [src]=" item.images[5].url" />
+          <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
+          <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
         </div>
       </div>
+    </div>
 
-      <div class="holder">
-        <p>Sport Events</p>
-        <div class="wrapper">
-          <div
-            class="item"
-            *ngFor="let item of sport | filter:searchTerm!"
-            [routerLink]="[item.id]"
-          >
-            <img [src]=" item.images[5].url" />
-            <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
-            <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
-          </div>
+    <div class="holder">
+      <p>Sport Events</p>
+      <div class="wrapper">
+        <div
+          class="item"
+          *ngFor="let item of sport | filter:searchTerm!"
+          [routerLink]="[item.id]"
+        >
+          <img [src]=" item.images[5].url" />
+          <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
+          <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
         </div>
       </div>
+    </div>
 
-      <div class="holder">
-        <p>Art Events</p>
-        <div class="wrapper">
-          <div
-            class="item"
-            *ngFor="let item of art | filter:searchTerm!"
-            [routerLink]="[item.id]"
-          >
-            <img [src]=" item.images[5].url" />
+    <div class="holder">
+      <p>Art Events</p>
+      <div class="wrapper">
+        <div
+          class="item"
+          *ngFor="let item of art | filter:searchTerm!"
+          [routerLink]="[item.id]"
+        >
+          <img [src]=" item.images[5].url" />
 
-            <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
-            <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
-          </div>
+          <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
+          <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
         </div>
       </div>
+    </div>
 
-      <!--   <ion-infinite-scroll (ionInfinite)="loadMore($event)">
+    <!--   <ion-infinite-scroll (ionInfinite)="loadMore($event)">
     <ion-infinite-scroll-content
      loadingSpinner="bubbles"
      loadingText="Loading more data..."></ion-infinite-scroll-content>
   </ion-infinite-scroll> -->
-    </ion-content>
+  </ion-content>
 </div>
