@@ -19,19 +19,21 @@
       >
     </ion-card-header>
     <ion-card-content>
-      <ion-label color="medium"></ion-label>
-
-      <ion-item lines="none">
-        <ion-icon name="calendar-outline"></ion-icon>
+      <ion-item>
+        <ion-icon name="location-outline"></ion-icon>
         <ion-label
           >{{ event._embedded.venues[0].address.line1 }}, {{
           event._embedded.venues[0].city.name }}</ion-label
         >
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-icon name="cash-outline"></ion-icon>
-        <ion-label>From {{ event.priceRanges[1].min }} €</ion-label>
+      <ion-item>
+        <ion-icon name="ticket-outline"></ion-icon>
+        <ion-label>Tickets From {{ event.priceRanges[1].min }} €</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="heart-circle-outline"></ion-icon>
+        <ion-label> {{ event.classifications[0].genre.name }} </ion-label>
       </ion-item>
     </ion-card-content>
   </ion-card>

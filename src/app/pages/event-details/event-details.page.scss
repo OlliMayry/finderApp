@@ -44,19 +44,23 @@ ion-button{
     align-items: center;
     width: 300px;
     text-align: center;
-    margin-top: 50px;
     --background: #21A91E;
 }
 
 ion-item::part(native) {
     background: black;
     color: white;
-    text-align: center;
+    
 }
 
+ion-item{
+    text-align: center;
+    margin-bottom: 30px;
+}
 ion-icon {
     color: white;
     display: inline;
+    size: 10px;
 }
 ion-card-subtitle{
     font-size: 20px;
@@ -72,6 +76,13 @@ ion-card-title{
     margin-bottom: 20px;
 
 }
+
+ion-card-content{
+    text-align: center;
+    color: white;
+    margin: 20px 20px 20px 0;
+
+}
 #center{
     text-align: center;
 }
@@ -81,3 +92,7 @@ span {
     text-decoration: underline;
 }
 
+
+.item-native {
+    text-align: center;
+}
