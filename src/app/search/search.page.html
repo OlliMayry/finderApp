@@ -1,33 +1,94 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>search</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Home</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>Favourites</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>Search</ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-title>My profile</ion-title>
+    </ion-toolbar>
+  </ion-header>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar class="hero">
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Event finder</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
 <ion-content>
-<h2>Filter Events</h2>
-<h3>Event Type</h3>
+<p>Filter Events</p>
 
-<input type="checkbox" id="" name="type1" value="Music">
-<label for="type1"> Music</label><br>
-<input type="checkbox" id="type2" name="vehicle2" value="ArtTheatre">
-<label for="type2"> Arts & Theatre</label><br>
-<input type="checkbox" id="type3" name="vehicle3" value="Sports">
-<label for="type3"> Sports</label><br>
+<ion-searchbar
+  placeholder='try "abc"'
+  [(ngModel)]="searchTerm!"
+  showCancelButton="focus"
+  animated>
+</ion-searchbar>
 
-<h3>City</h3>
+<div class="holder">
+  <p>All upcoming events</p>
+  <div class="wrapper">
+    <div
+      class="item"
+      *ngFor="let item of events | filter:searchTerm!"
+      [routerLink]="[item.id]"
+    >
+      <img [src]=" item.images[0].url" />
 
-<select name="cities" id="cities">
-  <option value="" disabled selected>Choose a city</option>
-  <option value="helsinki">Helsinki</option>
-  <option value="tampere">Tampere</option>
-  <option value="muu">Muu</option>
-</select>
+      <ion-card-content
+        >{{item.name}}, <br />
+        {{item.dates.start.localDate}}</ion-card-content
+      >
+    </div>
+  </div>
+</div>
 
-<h3>Date</h3>
-<input type="date" id="date">
+<div class="holder" id="music">
+  <p>Music Events</p>
+  <div class="wrapper">
+    <div class="item" *ngFor="let item of music" [routerLink]="[item.id]">
+      <img [src]=" item.images[0].url" />
+      <ion-card-content
+        >{{item.name}}, <br />
+        {{item.dates.start.localDate}}</ion-card-content
+      >
+    </div>
+  </div>
+</div>
 
-<br>
+<div class="holder">
+  <p>Sport Events</p>
+  <div class="wrapper">
+    <div class="item" *ngFor="let item of sport" [routerLink]="[item.id]">
+      <img [src]=" item.images[0].url" />
+      <ion-card-content
+        >{{item.name}}, <br />
+        {{item.dates.start.localDate}}</ion-card-content
+      >
+    </div>
+  </div>
+</div>
 
-<button type="button">Search</button>
+<div class="holder">
+  <p>Art Events</p>
+  <div class="wrapper">
+    <div class="item" *ngFor="let item of art" [routerLink]="[item.id]">
+      <img [src]=" item.images[0].url" />
+      <ion-card-content
+        >{{item.name}}, <br />
+        {{item.dates.start.localDate}}</ion-card-content
+      >
+    </div>
+  </div>
+</div>
+
 </ion-content>

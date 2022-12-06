@@ -1,0 +1,84 @@
+:host {
+    color: white;
+
+
+.hero{
+        --background: none;
+        background: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),url('https://i0.wp.com/themusicuniverse.com/wp-content/uploads/2022/05/eurovision.jpg?resize=768%2C432&ssl=1');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        --min-height: 80px;
+    
+ion-toolbar{
+    --background-color: black;
+}
+
+    ion-title{
+        font-size: 27px;
+        text-align: center;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    
+}
+
+	ion-content {
+		--background: black;
+	}
+
+    ion-menu-button{
+        color: white;
+        font-size: 50px;
+    }
+
+}
+
+p{
+    color:white;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.wrapper{
+           
+    max-width: 100%;
+    border: none;
+    display: flex;
+    overflow-x: auto;
+    .item{
+        min-width: 100px;
+        height: auto;
+        position: relative;
+        margin: 5px 10px;
+        img{
+        width: 100px;
+         height: 100px;
+        border-radius: 50%;
+         display: block;
+         margin-right: auto;
+         margin-left: auto;
+         border: 2px solid #fff;
+        }
+        ion-card-subtitle{
+            font-family: Calibri, 'Trebuchet MS', sans-serif;
+            margin-top: 10px;
+            text-align: center;
+        }
+        ion-card-content{
+            text-align: center;
+            font-size: 12px;
+            color: #fff;
+            margin-top: 5px;
+            padding: 0;
+        }
+    }
+}
+
+.search{
+    width: 100%;
+    text-align:center;
+}
