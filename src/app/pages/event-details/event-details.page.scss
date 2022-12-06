@@ -14,13 +14,17 @@
     --min-height: 80px;
 }
 ion-title{
-    font-size: 27px;
+    font-size: 35px;
     text-align: center;
-    color: white;
+    color:#E8D0D0;
+    letter-spacing: .1rem;
+    font-family: 'Jockey One', sans-serif;
+    font-weight: 400;
+
 }
 
 ion-back-button{
-    color: white;
+    color:#E8D0D0;
     font-size: 20px;
 }
 
@@ -45,11 +49,16 @@ ion-button{
     width: 300px;
     text-align: center;
     --background: #21A91E;
+    font-family: 'Inter', sans-serif;
+    text-decoration: underline;
+    color: black;
+    font-weight: 500;
+
 }
 
 ion-item::part(native) {
     background: black;
-    color: white;
+    color:#E8D0D0;
     
 }
 
@@ -58,29 +67,42 @@ ion-item{
     margin-bottom: 30px;
 }
 ion-icon {
-    color: white;
+    color:#E8D0D0;
     display: inline;
     size: 10px;
 }
 ion-card-subtitle{
     font-size: 20px;
     text-align: center;
-    color: white;
+    color:#E8D0D0;
     margin:10px 0;
+    font-family: 'Jockey One', sans-serif;
+    font-weight: 400;
+    letter-spacing: .1rem;
+
 
 }
 
+ion-label{
+    font-family: 'Jockey One', sans-serif;
+    color:#E8D0D0;
+
+
+}
 ion-card-title{
     text-align: center;
-    color: white;
+    color:#E8D0D0;
     margin-bottom: 20px;
+    font-family: 'Jockey One', sans-serif;
+    letter-spacing: .1rem;
 
 }
 
 ion-card-content{
     text-align: center;
-    color: white;
+    color:#E8D0D0;
     margin: 20px 20px 20px 0;
+    font-family: 'Jockey One', sans-serif;
 
 }
 #center{
