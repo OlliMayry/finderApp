@@ -10,14 +10,18 @@ ion-list {
     letter-spacing: 3px;
     ion-label {
       font-weight: bold;
-      font-size: 3rem;
-      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color:#E8D0D0;
+    letter-spacing: .1rem;
+    font-family: 'Jockey One', sans-serif;
+    font-weight: 400;
+    font-size: 70px;
     }
   }
   ion-button {
     font-weight: bold;
     text-transform: none;
-    margin:2vh;
+    margin:40px 2vh;
+    --background: #21A91E;
   }
   p {
     font-size: 0.9rem;
