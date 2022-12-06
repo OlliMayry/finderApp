@@ -24,13 +24,21 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
+
+    <ion-searchbar
+  placeholder='Search for an event'
+  [(ngModel)]="searchTerm!"
+  showCancelButton="focus"
+  animated>
+</ion-searchbar>
+
     <ion-content>
       <div class="holder">
         <p id="extra-margin">All upcoming events</p>
         <div class="wrapper">
           <div
             class="item"
-            *ngFor="let item of events"
+            *ngFor="let item of events | filter:searchTerm!"
             [routerLink]="[item.id]"
           >
             <img [src]=" item.images[5].url" />
@@ -43,7 +51,7 @@
       <div class="holder">
         <p>Music Events</p>
         <div class="wrapper">
-          <div class="item" *ngFor="let item of music" [routerLink]="[item.id]">
+          <div class="item" *ngFor="let item of music | filter:searchTerm!" [routerLink]="[item.id]">
             <img [src]=" item.images[5].url" />
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
             <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
@@ -54,7 +62,7 @@
       <div class="holder">
         <p>Sport Events</p>
         <div class="wrapper">
-          <div class="item" *ngFor="let item of sport" [routerLink]="[item.id]">
+          <div class="item" *ngFor="let item of sport | filter:searchTerm!" [routerLink]="[item.id]">
             <img [src]=" item.images[5].url" />
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
             <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
@@ -65,7 +73,7 @@
       <div class="holder">
         <p>Art Events</p>
         <div class="wrapper">
-          <div class="item" *ngFor="let item of art" [routerLink]="[item.id]">
+          <div class="item" *ngFor="let item of art | filter:searchTerm!" [routerLink]="[item.id]">
             <img [src]=" item.images[5].url" />
 
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>

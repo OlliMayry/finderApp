@@ -8,6 +8,8 @@ import { EventsPageRoutingModule } from './events-routing.module';
 
 import { EventsPage } from './events.page';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 @Pipe({
   name: 'truncate'
@@ -29,7 +31,8 @@ import { EventsPage } from './events.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    EventsPageRoutingModule
+    EventsPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [EventsPage, TruncatePipe]
 })

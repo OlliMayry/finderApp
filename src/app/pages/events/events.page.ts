@@ -13,6 +13,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 
 export class EventsPage implements OnInit {
+  searchTerm!: string;
   limit = 10;
   art:any = [];
   sport:any = [];
