@@ -24,13 +24,14 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-
     <ion-searchbar
-  placeholder='Search for an event'
-  [(ngModel)]="searchTerm!"
-  showCancelButton="focus"
-  animated>
-</ion-searchbar>
+      color="light"
+      placeholder="Search for an event"
+      [(ngModel)]="searchTerm!"
+      showCancelButton="focus"
+      animated
+    >
+    </ion-searchbar>
 
     <ion-content>
       <div class="holder">
@@ -51,7 +52,11 @@
       <div class="holder">
         <p>Music Events</p>
         <div class="wrapper">
-          <div class="item" *ngFor="let item of music | filter:searchTerm!" [routerLink]="[item.id]">
+          <div
+            class="item"
+            *ngFor="let item of music | filter:searchTerm!"
+            [routerLink]="[item.id]"
+          >
             <img [src]=" item.images[5].url" />
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
             <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
@@ -62,7 +67,11 @@
       <div class="holder">
         <p>Sport Events</p>
         <div class="wrapper">
-          <div class="item" *ngFor="let item of sport | filter:searchTerm!" [routerLink]="[item.id]">
+          <div
+            class="item"
+            *ngFor="let item of sport | filter:searchTerm!"
+            [routerLink]="[item.id]"
+          >
             <img [src]=" item.images[5].url" />
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
             <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
@@ -73,7 +82,11 @@
       <div class="holder">
         <p>Art Events</p>
         <div class="wrapper">
-          <div class="item" *ngFor="let item of art | filter:searchTerm!" [routerLink]="[item.id]">
+          <div
+            class="item"
+            *ngFor="let item of art | filter:searchTerm!"
+            [routerLink]="[item.id]"
+          >
             <img [src]=" item.images[5].url" />
 
             <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
