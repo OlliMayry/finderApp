@@ -26,7 +26,7 @@
   <ion-content>
     <ion-content>
       <div class="holder">
-        <p>All upcoming events</p>
+        <p id="extra-margin">All upcoming events</p>
         <div class="wrapper">
           <div
             class="item"
@@ -34,7 +34,7 @@
             [routerLink]="[item.id]"
           >
             <img [src]=" item.images[5].url" />
-            <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
+            <ion-card-content>{{item.name | truncate :[25]}}</ion-card-content>
             <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
           </div>
         </div>
