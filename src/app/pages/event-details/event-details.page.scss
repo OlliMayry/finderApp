@@ -45,24 +45,36 @@ ion-button{
     width: 300px;
     text-align: center;
     margin-top: 50px;
+    --background: #21A91E;
 }
 
 ion-item::part(native) {
     background: black;
     color: white;
+    text-align: center;
 }
 
-ion-card-title, ion-card-subtitle, ion-icon {
+ion-icon {
     color: white;
 }
 ion-card-subtitle{
     font-size: 15px;
+    text-align: center;
+    color: white;
+
 }
 
-ion-icon {
-    margin-right: 10px;
-}
+ion-card-title{
+    text-align: center;
+    color: white;
 
+}
 #center{
     text-align: center;
 }
+
+span {
+    color: black;
+    text-decoration: underline;
+}
+

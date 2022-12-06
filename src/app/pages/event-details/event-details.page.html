@@ -14,7 +14,9 @@
     <ion-card-header>
       <ion-card-title>{{ event.name }}</ion-card-title>
       <ion-card-subtitle>{{ event.dates.start.localDate }}</ion-card-subtitle>
-      <ion-card-subtitle>{{ event.dates.start.localTime}}</ion-card-subtitle>
+      <ion-card-subtitle
+        >{{ event.dates.start.localTime | time :[5]}}</ion-card-subtitle
+      >
 
       <ion-text color="tertiary">
         <span
@@ -45,7 +47,9 @@
     </ion-card-content>
   </ion-card>
   <div id="center">
-    <ion-button color="success">Buy tickets</ion-button>
+    <ion-button (click)="openHomepage()" *ngIf="event?.url"
+      >Buy tickets</ion-button
+    >
   </div>
   <!-- <ion-button
     expand="full"

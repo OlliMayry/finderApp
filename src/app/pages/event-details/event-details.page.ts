@@ -22,8 +22,7 @@ export class EventDetailsPage implements OnInit {
   );
 }
 
-/*openHomepage() {
-  
-  window.open(this.event._embedded.venues[0].url);
-} */
+openHomepage() {
+  window.open(this.event.url);
+}
 }
