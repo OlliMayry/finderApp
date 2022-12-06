@@ -2,6 +2,7 @@ import { Component, OnInit} from '@angular/core';
 import { InfiniteScrollCustomEvent, LoadingController } from '@ionic/angular';
 import { EventService } from 'src/app/services/event.service';
 import { environment } from 'src/environments/environment';
+import { Pipe, PipeTransform } from '@angular/core';
 /*import { ApiResult } from 'src/app/services/event.service'; */
 
 
@@ -12,6 +13,7 @@ import { environment } from 'src/environments/environment';
 })
 
 export class EventsPage implements OnInit {
+  limit = 10;
   art:any = [];
   sport:any = [];
   music:any = [];
@@ -80,6 +82,7 @@ export class EventsPage implements OnInit {
       }
       
     });
+
     
   }
   loadMore(event: InfiniteScrollCustomEvent) {
@@ -87,3 +90,4 @@ export class EventsPage implements OnInit {
     this.loadEvents();
   }
 }
+

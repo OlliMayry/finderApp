@@ -34,11 +34,8 @@
             [routerLink]="[item.id]"
           >
             <img [src]=" item.images[0].url" />
-
-            <ion-card-content
-              >{{item.name}}, <br />
-              {{item.dates.start.localDate}}</ion-card-content
-            >
+            <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
+            <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
           </div>
         </div>
       </div>
@@ -48,10 +45,8 @@
         <div class="wrapper">
           <div class="item" *ngFor="let item of music" [routerLink]="[item.id]">
             <img [src]=" item.images[0].url" />
-            <ion-card-content
-              >{{item.name}}, <br />
-              {{item.dates.start.localDate}}</ion-card-content
-            >
+            <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
+            <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
           </div>
         </div>
       </div>
@@ -61,10 +56,8 @@
         <div class="wrapper">
           <div class="item" *ngFor="let item of sport" [routerLink]="[item.id]">
             <img [src]=" item.images[0].url" />
-            <ion-card-content
-              >{{item.name}}, <br />
-              {{item.dates.start.localDate}}</ion-card-content
-            >
+            <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
+            <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
           </div>
         </div>
       </div>
@@ -74,10 +67,9 @@
         <div class="wrapper">
           <div class="item" *ngFor="let item of art" [routerLink]="[item.id]">
             <img [src]=" item.images[0].url" />
-            <ion-card-content
-              >{{item.name}}, <br />
-              {{item.dates.start.localDate}}</ion-card-content
-            >
+
+            <ion-card-content>{{item.name | truncate :[20]}}</ion-card-content>
+            <ion-card-content> {{item.dates.start.localDate}}</ion-card-content>
           </div>
         </div>
       </div>
