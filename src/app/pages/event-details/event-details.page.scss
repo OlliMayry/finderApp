@@ -56,17 +56,20 @@ ion-item::part(native) {
 
 ion-icon {
     color: white;
+    display: inline;
 }
 ion-card-subtitle{
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
     color: white;
+    margin:10px 0;
 
 }
 
 ion-card-title{
     text-align: center;
     color: white;
+    margin-bottom: 20px;
 
 }
 #center{
