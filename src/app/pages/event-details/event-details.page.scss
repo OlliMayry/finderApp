@@ -5,8 +5,8 @@
 .hero{
     --background: none;
     background: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.6)
       ),url('https://i0.wp.com/themusicuniverse.com/wp-content/uploads/2022/05/eurovision.jpg?resize=768%2C432&ssl=1');
     background-position: center center;
     background-repeat: no-repeat;
@@ -14,13 +14,17 @@
     --min-height: 80px;
 }
 ion-title{
-    font-size: 27px;
+    font-size: 35px;
     text-align: center;
-    color: white;
+    color:#E8D0D0;
+    letter-spacing: .1rem;
+    font-family: 'Jockey One', sans-serif;
+    font-weight: 400;
+
 }
 
 ion-back-button{
-    color: white;
+    color:#E8D0D0;
     font-size: 20px;
 }
 
@@ -44,25 +48,73 @@ ion-button{
     align-items: center;
     width: 300px;
     text-align: center;
-    margin-top: 50px;
+    --background: #21A91E;
+    font-family: 'Inter', sans-serif;
+    text-decoration: underline;
+    color: black;
+    font-weight: 500;
+
 }
 
 ion-item::part(native) {
     background: black;
-    color: white;
+    color:#E8D0D0;
+    
 }
 
-ion-card-title, ion-card-subtitle, ion-icon {
-    color: white;
+ion-item{
+    text-align: center;
+    margin-bottom: 30px;
+}
+ion-icon {
+    color:#E8D0D0;
+    display: inline;
+    size: 10px;
 }
 ion-card-subtitle{
-    font-size: 15px;
+    font-size: 20px;
+    text-align: center;
+    color:#E8D0D0;
+    margin:10px 0;
+    font-family: 'Jockey One', sans-serif;
+    font-weight: 400;
+    letter-spacing: .1rem;
+
+
 }
 
-ion-icon {
-    margin-right: 10px;
+ion-label{
+    font-family: 'Jockey One', sans-serif;
+    color:#E8D0D0;
+
+
+}
+ion-card-title{
+    text-align: center;
+    color:#E8D0D0;
+    margin-bottom: 20px;
+    font-family: 'Jockey One', sans-serif;
+    letter-spacing: .1rem;
+
 }
 
+ion-card-content{
+    text-align: center;
+    color:#E8D0D0;
+    margin: 20px 20px 20px 0;
+    font-family: 'Jockey One', sans-serif;
+
+}
 #center{
+    text-align: center;
+}
+
+span {
+    color: black;
+    text-decoration: underline;
+}
+
+
+.item-native {
     text-align: center;
 }

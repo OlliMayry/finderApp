@@ -9,43 +9,38 @@
 
 <ion-content>
   <ion-card *ngIf="event">
-    <img [src]=" event.images[0].url" />
+    <img [src]=" event.images[5].url" />
 
     <ion-card-header>
       <ion-card-title>{{ event.name }}</ion-card-title>
       <ion-card-subtitle>{{ event.dates.start.localDate }}</ion-card-subtitle>
-      <ion-card-subtitle>{{ event.dates.start.localTime}}</ion-card-subtitle>
-
-      <ion-text color="tertiary">
-        <span
-          *ngFor="let g of event.classifications[0].genre.name; let isLast = last"
-        >
-          {{ g.name }} {{ !isLast ? '·' : '' }}
-        </span>
-      </ion-text>
+      <ion-card-subtitle
+        >{{ event.dates.start.localTime | time :[5]}}</ion-card-subtitle
+      >
     </ion-card-header>
     <ion-card-content>
-      <ion-label color="medium"></ion-label>
-
-      <ion-item lines="none">
-        <ion-icon name="calendar-outline" slot="start"></ion-icon>
+      <ion-item>
+        <ion-icon name="location-outline"></ion-icon>
         <ion-label
           >{{ event._embedded.venues[0].address.line1 }}, {{
           event._embedded.venues[0].city.name }}</ion-label
         >
       </ion-item>
 
-      <ion-item lines="none">
-        <ion-icon name="cash-outline" slot="start"></ion-icon>
-        <ion-label
-          >{{ event._embedded.venues[0].address.line1 }}, {{
-          event._embedded.venues[0].city.name }}</ion-label
-        >
+      <ion-item>
+        <ion-icon name="ticket-outline"></ion-icon>
+        <ion-label>Tickets From {{ event.priceRanges[1].min }} €</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="heart-circle-outline"></ion-icon>
+        <ion-label> {{ event.classifications[0].genre.name }} </ion-label>
       </ion-item>
     </ion-card-content>
   </ion-card>
   <div id="center">
-    <ion-button color="success">Buy tickets</ion-button>
+    <ion-button (click)="openHomepage()" *ngIf="event?.url"
+      >Buy tickets</ion-button
+    >
   </div>
   <!-- <ion-button
     expand="full"

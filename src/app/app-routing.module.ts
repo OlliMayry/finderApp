@@ -28,7 +28,11 @@ const routes: Routes = [
   },
   {
     path: 'search',
-    loadChildren: () => import('./search/search.module').then( m => m.SearchPageModule)
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'search/:id',
+    loadChildren: () => import('./pages/event-details/event-details.module').then( m => m.EventDetailsPageModule)
   },
 
 
