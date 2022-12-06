@@ -28,7 +28,7 @@
 <p>Filter Events</p>
 
 <ion-searchbar
-  placeholder='try "abc"'
+  placeholder='Hae Tapahtumaa'
   [(ngModel)]="searchTerm!"
   showCancelButton="focus"
   animated>
@@ -55,7 +55,7 @@
 <div class="holder" id="music">
   <p>Music Events</p>
   <div class="wrapper">
-    <div class="item" *ngFor="let item of music" [routerLink]="[item.id]">
+    <div class="item" *ngFor="let item of music | filter:searchTerm!" [routerLink]="[item.id]">
       <img [src]=" item.images[0].url" />
       <ion-card-content
         >{{item.name}}, <br />
@@ -68,7 +68,7 @@
 <div class="holder">
   <p>Sport Events</p>
   <div class="wrapper">
-    <div class="item" *ngFor="let item of sport" [routerLink]="[item.id]">
+    <div class="item" *ngFor="let item of sport | filter:searchTerm!" [routerLink]="[item.id]">
       <img [src]=" item.images[0].url" />
       <ion-card-content
         >{{item.name}}, <br />
@@ -81,7 +81,7 @@
 <div class="holder">
   <p>Art Events</p>
   <div class="wrapper">
-    <div class="item" *ngFor="let item of art" [routerLink]="[item.id]">
+    <div class="item" *ngFor="let item of art | filter:searchTerm!" [routerLink]="[item.id]">
       <img [src]=" item.images[0].url" />
       <ion-card-content
         >{{item.name}}, <br />
